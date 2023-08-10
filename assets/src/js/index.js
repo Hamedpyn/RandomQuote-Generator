@@ -30,3 +30,20 @@ twitter.addEventListener('click', () => {
     let twUrl = `https://twitter.com/intent/tweet?text=${quoteText.innerHTML}`
     window.open(twUrl, '_blank')
 })
+
+// random Quote function
+function randomQuote() {
+    // fetch new quote from API
+    quoteBtn.classList.add('loading')
+    quoteBtn.innerHTML = `Loading Quote`
+    fetch('https://api.quotable.io/random').then(res => {
+        res.json().then(result => {
+            quoteText.innerHTML = result.content
+            writer.innerHTML = result.author
+            quoteBtn.innerHTML = `new Quote`
+            quoteBtn.classList.remove('loading')
+        })
+    })
+}
+
+quoteBtn.addEventListener('click', randomQuote)
