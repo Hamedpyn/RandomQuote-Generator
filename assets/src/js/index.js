@@ -18,3 +18,9 @@ soundBtn.addEventListener('click', () => {
     let newVoice = new SpeechSynthesisUtterance(`${quoteText.innerHTML} , by ${writer.innerHTML}`)
     speechSynthesis.speak(newVoice)
 })
+
+copy.addEventListener('click', () => {
+    // copy quote text to clipboard
+    navigator.clipboard.writeText(quoteText.innerHTML)
+
+})
