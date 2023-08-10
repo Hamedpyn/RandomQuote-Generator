@@ -1,3 +1,8 @@
+// Developer : @HAMEDPYN
+// Version : 1.0
+// Date : 08 / 10 / 2023
+
+
 // Select DOM Elements
 
 // button to trigger text-to-speech
