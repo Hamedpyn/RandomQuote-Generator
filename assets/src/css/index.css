@@ -1,2 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background-color: #5372f0;
+}
+
+#container {
+    background-color: #fff;
+    height: auto;
+    width: 605px;
+    border-radius: 15px;
+    margin: 100px auto;
+    padding-left: 30px;
+}
+
+#title p {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#quoteGenerator {
+    margin: 35px 0;
+}
+
+#quote-area {
+    display: flex;
+    justify-content: center;
+}
+
+#quote {
+    font-size: 18px;
+    text-align: center;
+    word-break: break-all;
+}
+
+#quote-area i {
+    font-size: 15px;
+}
+
+#quote-area i:first-of-type {
+    margin: 3px 10px 0 0;
+}
+
+#quote-area i:last-of-type {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 20px 3px 12px;
+}
+
+#author {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 20px;
+    margin-right: 15px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#author span:first-of-type {
+    margin: -5px 5px 0 0;
+    font-family: monospace;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-right: 20px;
+    padding-bottom: 7px;
+}
+
+#button {
+    margin-left: 200px;
+    border: none;
+    outline: none;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background-color: #5372f0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#icons span {
+    margin: 0 5px;
+    width: 47px;
+    border: 2px solid #5372f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5372f0;
+    height: 47px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#icons span:hover {
+    color: #fff;
+    background-color: #5372f0;
+}
+
+.loading {
+    opacity: .7;
+    pointer-events: none;
+}
