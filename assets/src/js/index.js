@@ -12,3 +12,9 @@ let soundBtn = document.querySelector('#sound'),
     twitter = document.querySelector('#twitter'),
     // button to copy quote to clipboard
     copy = document.querySelector('#copy');
+
+soundBtn.addEventListener('click', () => {
+    // speak quote text and author with text-to-speech
+    let newVoice = new SpeechSynthesisUtterance(`${quoteText.innerHTML} , by ${writer.innerHTML}`)
+    speechSynthesis.speak(newVoice)
+})
