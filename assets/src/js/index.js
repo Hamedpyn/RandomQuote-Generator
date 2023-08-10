@@ -24,3 +24,9 @@ copy.addEventListener('click', () => {
     navigator.clipboard.writeText(quoteText.innerHTML)
 
 })
+
+twitter.addEventListener('click', () => {
+    // open new tab to prefilled tweet with quote text
+    let twUrl = `https://twitter.com/intent/tweet?text=${quoteText.innerHTML}`
+    window.open(twUrl, '_blank')
+})
