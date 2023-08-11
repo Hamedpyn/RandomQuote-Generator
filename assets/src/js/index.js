@@ -16,7 +16,9 @@ let soundBtn = document.querySelector('#sound'),
     // button to tweet quote
     twitter = document.querySelector('#twitter'),
     // button to copy quote to clipboard
-    copy = document.querySelector('#copy');
+    copy = document.querySelector('#copy'),
+    // an text to alert the copy success
+    copyAlert = document.querySelector('.tooltiptext')
 
 soundBtn.addEventListener('click', () => {
     // speak quote text and author with text-to-speech
@@ -27,7 +29,12 @@ soundBtn.addEventListener('click', () => {
 copy.addEventListener('click', () => {
     // copy quote text to clipboard
     navigator.clipboard.writeText(quoteText.innerHTML)
-
+    // success alert been shown
+    copyAlert.style.display = 'block'
+    // it disappear after 1s
+    setTimeout(() => {
+        copyAlert.style.display = 'none'
+    }, 1000);
 })
 
 twitter.addEventListener('click', () => {
